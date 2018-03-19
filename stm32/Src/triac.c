@@ -6,7 +6,7 @@ TIM_HandleTypeDef htim4;
 
 void soft_start (void) {
 ///////////////////////////////////////////////////  
-/**********Delay before open triacs***************/
+/*******Delay before opening the triacs************/
 ///////////////////////////////////////////////////  
   if(delay > 1) {
     delay=delay-10;
@@ -15,7 +15,7 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
   }
 //////////////////////////////////////////////////////////////  
-/********************Signals for open triacs*****************/
+/********************Triac opening signal*****************/
 //////////////////////////////////////////////////////////////  
   for(number = 0; number < 4; number++){
   TRIAC_1_OPEN
@@ -35,7 +35,7 @@ void soft_start (void) {
           delay = regulator;
         }
 //////////////////////////////////////////
-/********Open triac*********************/
+/********Opening triac*******************/
 //////////////////////////////////////////
   if (HAL_GPIO_ReadPin(PLUS_GPIO_Port, PLUS_Pin) == RESET) {
         for(step = 0; step < 100; step++) {
@@ -50,7 +50,7 @@ void soft_start (void) {
     }
   
 //////////////////////////////////////////
-/********Close triac**********************/
+/********Closed triac**********************/
 //////////////////////////////////////////
 		
   if (HAL_GPIO_ReadPin(MINUS_GPIO_Port, MINUS_Pin) == RESET) {
@@ -73,20 +73,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 	
   time = 360;
  current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
     
   }
   
@@ -97,20 +97,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 320;
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
     
   }
 
@@ -121,20 +121,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 280;
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }  
   
@@ -145,20 +145,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 240;			//250
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -169,20 +169,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 200;			//210
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -193,20 +193,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 160;			//170
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -217,20 +217,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 110;			//120
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -241,20 +241,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 80;			//90
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -265,20 +265,20 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 50;			//60
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 	
@@ -289,43 +289,44 @@ void soft_start (void) {
       HAL_TIM_Base_Start_IT(&htim4);
     }
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
   
    time = 15;			//20
 	current_res();
   
-  TRIAC_1_OPEN
+  /*TRIAC_1_OPEN
   for(step = 0; step < 100; step++) {
     HAL_TIM_Base_Start_IT(&htim4);
   }
-  TRIAC_1_CLOSE
+  TRIAC_1_CLOSE*/
 
   }
 
-
+	/*****TrueRMS current calculation*******/
 	
-	
-	if (cycle == 10) {
+	/*if (cycle == 10) {
 		current = sqrtf(data / (cycle * 50)) * 10;
 		true_current = (float)current / 45;
 		true_current_after_dot = (10 / (current % 45)) *10;
 		data = 0;
 		cycle = 0;
 		//adc_max = 0;
-  }
+  }*/
 	
-	/*if (cycle == 10) {
+	/*******Calculation of average arithmetic current********/
+	
+	if (cycle == 10) {
 		current = data / (cycle * 50);
 		true_current = (float)current / 21;
 		true_current_after_dot = (10 / (current % 21)) *10;
 		data = 0;
 		cycle = 0;
 		//adc_max = 0;
-  }*/
+  }
 	
 	/*if (current > 13) {		//200
 		error++;

@@ -21,7 +21,7 @@ void acs_result(void) {
 }
 
 
-void current_res (void) {
+/*void current_res (void) {
 	for (i=0; i < 50; i++) {
 		acs_result();
 		if (adc > 1950) {			//1940
@@ -34,9 +34,9 @@ void current_res (void) {
     }
   }
   cycle++;
-}
+}*/
 
-/*void current_res (void) {
+void current_res (void) {
 	for (i=0; i < 50; i++) {
 		acs_result();
 		i++;
@@ -49,4 +49,4 @@ void current_res (void) {
     }
   }
   cycle++;
-}*/
+}
